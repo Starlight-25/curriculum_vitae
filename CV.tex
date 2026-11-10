@@ -1,0 +1,115 @@
+\documentclass[10pt, a4paper]{article}
+
+% Uniquement 2 packages essentiels
+\usepackage[a4paper, margin=1.3cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+% Suppression de la numérotation des pages
+\pagestyle{empty}
+
+% Redéfinition simple d'une section avec commande LaTeX native
+\newcommand{\resumesection}[1]{%
+  \vspace{7pt}%
+  \noindent{\large\textbf{\uppercase{#1}}}\\[-6pt]%
+  \noindent\rule{\textwidth}{0.5pt}%
+  \vspace{3pt}%
+}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+  {\LARGE \textbf{Jérôme Lin}} \\[3pt]
+  \textbf{Software Engineering Student --- Seeking a 4-to-6-Month DevOps / Systems Internship} \\[3pt]
+  {\small
+    Paris, France \ $\cdot$ \ 
+    +33 7 68 07 18 87 \ $\cdot$ \ 
+    \href{mailto:jerome.lin@epita.fr}{jerome.lin@epita.fr} \ $\cdot$ \ 
+    \href{https://linkedin.com/in/jerome-lin-epita}{linkedin.com/in/jerome-lin-epita} \ $\cdot$ \ 
+    \href{https://jerome-lin.vercel.app}{jerome-lin.vercel.app}
+  }
+\end{center}
+
+\vspace{-4pt}
+
+% --- EDUCATION ---
+\resumesection{Education}
+
+\noindent \textbf{EPITA --- School of Computer Science \& Advanced Technologies} \hfill Paris, France \\
+\textit{Master of Science in Computer Science \& Engineering (Expected Grad.: 2029)} \hfill \textbf{2024 -- Present}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \textbf{Core Curriculum (ING1):} Operating Systems internals, C/UNIX programming, POSIX standards, Networking (TCP/IP stack, routing), Compilers, Database systems (SQL), Concurrency.
+  \item \textbf{Academic background:} International Preparatory Cycle (taught in English); High School Baccalaureate in Mathematics \& Physics-Chemistry (Mention Très Bien).
+  \item \textbf{Erasmus+ Grant:} Eligible for EU mobility funding (Germany, Luxembourg, Netherlands).
+\end{itemize}
+
+% --- SKILLS ---
+\resumesection{Technical Skills}
+
+\noindent \textbf{Systems \& OS:} Linux/UNIX internals, POSIX API, Process Management, Signals, Memory Management \\
+\textbf{Languages:} C, C++, Python, POSIX Shell (Bash), C\#, SQL, HTML/CSS, JavaScript/React \\
+\textbf{DevOps \& Tools:} Git, Docker, Make / Makefiles, GCC/Clang, GDB, Valgrind, GitHub Actions, Linux CLI \\
+\textbf{Networking \& DB:} TCP/IP, OSI model, Sockets, Firebase Realtime Database, JSON \\
+\textbf{Languages (Spoken):} French (Native), English (B2/Fluent, English track), German (A2)
+
+% --- PROJECTS ---
+\resumesection{Key Technical Projects}
+
+\noindent \textbf{POSIX Shell Implementation (42sh)} $|$ \textit{C, POSIX API, Linux, AST, Git} \hfill \textbf{EPITA SAÉ}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Architected a compliant POSIX shell from scratch in C under rigorous coding norms (-Wall -Wextra -Werror).
+  \item Implemented process lifecycle control (\texttt{fork}, \texttt{execvp}, \texttt{waitpid}), I/O redirection pipelines (\texttt{pipe}, \texttt{dup2}), and asynchronous signal handling (\texttt{SIGINT}, \texttt{SIGTERM}).
+  \item Built a robust lexical analyzer and recursive descent parser generating an Abstract Syntax Tree (AST).
+\end{itemize}
+
+\noindent \textbf{Dynamic Memory Allocator (libmalloc)} $|$ \textit{C, Linux Kernel API, mmap, Pthreads} \hfill \textbf{EPITA}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Developed an overridden dynamic allocator library (\texttt{malloc}, \texttt{free}, \texttt{calloc}, \texttt{realloc}) using \texttt{mmap(2)} and \texttt{munmap(2)}.
+  \item Optimized chunk metadata layout and implemented thread-safety via POSIX mutexes to prevent memory corruption.
+  \item Integrated into host binaries via \texttt{LD\_PRELOAD} to handle heavy multi-threaded memory workloads.
+\end{itemize}
+
+\noindent \textbf{OCR \& Word Search Solver} $|$ \textit{C, Image Processing, Neural Networks} \hfill \textbf{Academic Project}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Implemented an end-to-end character recognition pipeline in C without external high-level ML frameworks.
+  \item Developed image pre-processing algorithms (noise reduction, binarization, grid line detection) and a custom multilayer perceptron for optical letter classification.
+\end{itemize}
+
+\noindent \textbf{Minimake --- Simplified Build System} $|$ \textit{C99, Makefile Parsing, Process Scheduling} \hfill \textbf{EPITA}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Built a UNIX \texttt{make(1)} clone executing dependency graphs, pattern rules (\%), and variable expansions.
+  \item Utilized timestamp comparison (\texttt{stat(2)}) to determine outdated targets and run parallel child subshells.
+\end{itemize}
+
+% --- EXPERIENCE ---
+\resumesection{Professional Experience}
+
+\noindent \textbf{Saipem SA} \hfill Montigny-le-Bretonneux, France \\
+\textit{Engineering Intern --- Drilling Machine Digital Twin} \hfill \textbf{June 2025 -- July 2025}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Developed a digital twin application representing an industrial drilling rig for real-time visualization.
+  \item Gained direct experience with corporate software lifecycle, cross-functional collaboration, and industrial safety constraints.
+\end{itemize}
+
+\noindent \textbf{EPITA School Ambassador} \hfill Paris, France \\
+\textit{Student Representative \& Presenter} \hfill \textbf{2024 -- Present}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Represent the institution during academic forums, open days, and student onboarding sessions.
+  \item Deliver technical demonstrations and guide prospective international students.
+\end{itemize}
+
+\end{document}
