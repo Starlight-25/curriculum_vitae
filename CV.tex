@@ -26,90 +26,104 @@
     +33 7 68 07 18 87 \ $\cdot$ \ 
     \href{mailto:jerome.lin@epita.fr}{jerome.lin@epita.fr} \ $\cdot$ \ 
     \href{https://linkedin.com/in/jerome-lin-epita}{linkedin.com/in/jerome-lin-epita} \ $\cdot$ \ 
+    \href{https://github.com/Starlight-25}{github.com/Starlight-25} \ $\cdot$ \ 
     \href{https://jerome-lin.vercel.app}{jerome-lin.vercel.app}
   }
 \end{center}
 
 \vspace{-4pt}
 
-% --- EDUCATION ---
-\resumesection{Education}
-
-\noindent \textbf{EPITA --- School of Computer Science \& Advanced Technologies} \hfill Paris, France \\
-\textit{Master of Science in Computer Science \& Engineering (Expected Grad.: 2029)} \hfill \textbf{2024 -- Present}
-\begin{itemize}
-  \setlength{\itemsep}{1pt}
-  \setlength{\parskip}{0pt}
-  \item \textbf{Core Curriculum (ING1):} Operating Systems internals, C/UNIX programming, POSIX standards, Networking (TCP/IP stack, routing), Compilers, Database systems (SQL), Concurrency.
-  \item \textbf{Academic background:} International Preparatory Cycle (taught in English); High School Baccalaureate in Mathematics \& Physics-Chemistry (Mention Très Bien).
-  \item \textbf{Erasmus+ Grant:} Eligible for EU mobility funding (Germany, Luxembourg, Netherlands).
-\end{itemize}
-
 % --- SKILLS ---
 \resumesection{Technical Skills}
 
-\noindent \textbf{Systems \& OS:} Linux/UNIX internals, POSIX API, Process Management, Signals, Memory Management \\
-\textbf{Languages:} C, C++, Python, POSIX Shell (Bash), C\#, SQL, HTML/CSS, JavaScript/React \\
-\textbf{DevOps \& Tools:} Git, Docker, Make / Makefiles, GCC/Clang, GDB, Valgrind, GitHub Actions, Linux CLI \\
-\textbf{Networking \& DB:} TCP/IP, OSI model, Sockets, Firebase Realtime Database, JSON \\
-\textbf{Languages (Spoken):} French (Native), English (B2/Fluent, English track), German (A2)
+\noindent \textbf{Systems \& OS:} Linux/UNIX internals, POSIX API, x86-64 Assembly \\
+\textbf{Languages:} C, C++, POSIX Shell (Bash), Python, Java, SQL, C\#, JavaScript/TypeScript, HTML/CSS \\
+\textbf{DevOps \& Tools:} Criterion (C Unit Testing), Shell Test Suites, Make / Makefiles, GCC/Clang, GDB, Valgrind
+\textbf{Networking \& Databases:} TCP/IP, Sockets, DNS, HTTP/HTTPS, SQL (PostgreSQL, SQLite) \\
 
 % --- PROJECTS ---
 \resumesection{Key Technical Projects}
 
-\noindent \textbf{POSIX Shell Implementation (42sh)} $|$ \textit{C, POSIX API, Linux, AST, Git} \hfill \textbf{EPITA SAÉ}
+\noindent \textbf{POSIX Shell Interpreter (42sh)} $|$ \textit{C, POSIX API, Linux, AST, Git} \hfill \textbf{EPITA SAÉ}
 \begin{itemize}
   \setlength{\itemsep}{1pt}
   \setlength{\parskip}{0pt}
-  \item Architected a compliant POSIX shell from scratch in C under rigorous coding norms (-Wall -Wextra -Werror).
-  \item Implemented process lifecycle control (\texttt{fork}, \texttt{execvp}, \texttt{waitpid}), I/O redirection pipelines (\texttt{pipe}, \texttt{dup2}), and asynchronous signal handling (\texttt{SIGINT}, \texttt{SIGTERM}).
-  \item Built a robust lexical analyzer and recursive descent parser generating an Abstract Syntax Tree (AST).
+  \item Architected a compliant POSIX shell from scratch in C under strict coding norms (-Wall -Wextra -Werror).
+  \item Handled process lifecycle, I/O redirection pipelines, and asynchronous signals (\texttt{SIGINT}, \texttt{SIGTERM}).
+  \item Built a lexical analyzer and recursive descent parser producing an Abstract Syntax Tree (AST).
 \end{itemize}
 
-\noindent \textbf{Dynamic Memory Allocator (libmalloc)} $|$ \textit{C, Linux Kernel API, mmap, Pthreads} \hfill \textbf{EPITA}
-\begin{itemize}
-  \setlength{\itemsep}{1pt}
-  \setlength{\parskip}{0pt}
-  \item Developed an overridden dynamic allocator library (\texttt{malloc}, \texttt{free}, \texttt{calloc}, \texttt{realloc}) using \texttt{mmap(2)} and \texttt{munmap(2)}.
-  \item Optimized chunk metadata layout and implemented thread-safety via POSIX mutexes to prevent memory corruption.
-  \item Integrated into host binaries via \texttt{LD\_PRELOAD} to handle heavy multi-threaded memory workloads.
-\end{itemize}
-
-\noindent \textbf{OCR \& Word Search Solver} $|$ \textit{C, Image Processing, Neural Networks} \hfill \textbf{Academic Project}
-\begin{itemize}
-  \setlength{\itemsep}{1pt}
-  \setlength{\parskip}{0pt}
-  \item Implemented an end-to-end character recognition pipeline in C without external high-level ML frameworks.
-  \item Developed image pre-processing algorithms (noise reduction, binarization, grid line detection) and a custom multilayer perceptron for optical letter classification.
-\end{itemize}
-
-\noindent \textbf{Minimake --- Simplified Build System} $|$ \textit{C99, Makefile Parsing, Process Scheduling} \hfill \textbf{EPITA}
+\noindent \textbf{Minimake --- Simplified Build System} $|$ \textit{C99, Makefile Parsing, Process Scheduling} \hfill \textbf{EPITA SAÉ}
 \begin{itemize}
   \setlength{\itemsep}{1pt}
   \setlength{\parskip}{0pt}
   \item Built a UNIX \texttt{make(1)} clone executing dependency graphs, pattern rules (\%), and variable expansions.
-  \item Utilized timestamp comparison (\texttt{stat(2)}) to determine outdated targets and run parallel child subshells.
+  \item Parsed timestamps via \texttt{stat(2)} to trigger builds and run parallel child subshell executions.
+\end{itemize}
+
+\noindent \textbf{Dynamic Memory Allocator (libmalloc)} $|$ \textit{C, Linux Kernel API, mmap, Pthreads} \hfill \textbf{EPITA SAÉ}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Implemented custom \texttt{malloc}, \texttt{free}, \texttt{calloc}, and \texttt{realloc} using \texttt{mmap(2)} and chunk metadata.
+  \item Ensured thread safety via POSIX mutexes and injected into binaries using \texttt{LD\_PRELOAD}.
+\end{itemize}
+
+\noindent \textbf{OCR \& Word Search Solver} $|$ \textit{C, Image Processing, Neural Networks} \hfill \textbf{EPITA Prep Cycle}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Implemented an end-to-end character recognition pipeline in C without external ML frameworks.
+  \item Built image filtering algorithms (binarization, grid detection) and a custom multilayer perceptron for letter classification.
 \end{itemize}
 
 % --- EXPERIENCE ---
 \resumesection{Professional Experience}
 
-\noindent \textbf{Saipem SA} \hfill Montigny-le-Bretonneux, France \\
-\textit{Engineering Intern --- Drilling Machine Digital Twin} \hfill \textbf{June 2025 -- July 2025}
+\noindent \textbf{Saipem SA} --- \textit{Engineering Intern (Drilling Digital Twin)} \hfill \textbf{June 2025 -- July 2025}
 \begin{itemize}
   \setlength{\itemsep}{1pt}
   \setlength{\parskip}{0pt}
   \item Developed a digital twin application representing an industrial drilling rig for real-time visualization.
-  \item Gained direct experience with corporate software lifecycle, cross-functional collaboration, and industrial safety constraints.
+  \item Hands-on experience in software lifecycles, cross-functional teamwork, and industrial safety.
 \end{itemize}
 
-\noindent \textbf{EPITA School Ambassador} \hfill Paris, France \\
-\textit{Student Representative \& Presenter} \hfill \textbf{2024 -- Present}
+\noindent \textbf{Tommy Hilfiger} --- \textit{Retail Operations \& Sales Associate} \hfill \textbf{December 2025 -- February 2026}
 \begin{itemize}
   \setlength{\itemsep}{1pt}
   \setlength{\parskip}{0pt}
-  \item Represent the institution during academic forums, open days, and student onboarding sessions.
-  \item Deliver technical demonstrations and guide prospective international students.
+  \item Streamlined stock logistics, restocking, and visual merchandising adhering to brand standards.
+  \item Handled international customer interactions, resolving inquiries and driving sales under peak store traffic.
 \end{itemize}
+
+
+\noindent \textbf{EPITA} --- \textit{School Ambassador} \hfill \textbf{2024 -- Present}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Represent the school at academic forums and open days; deliver presentations and advise prospective students on engineering programs.
+\end{itemize}
+
+% --- EDUCATION ---
+\resumesection{Education}
+
+\noindent \textbf{EPITA --- School of Computer Science \& Advanced Technologies} \hfill Paris, France \\
+\textit{Diplôme d'Ingénieur (Master of Science in Engineering, CTI accredited)} \hfill \textbf{2024 -- 2029}
+
+\begin{itemize}
+  \setlength{\topsep}{0pt}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \textbf{International Preparatory Cycle} (English Section, 2024--2026).
+  \item \textbf{Relevant Coursework:} Operating Systems (SYS), Networks (NET1), Relational Databases (SQL), C/Unix Programming (CNIX), Assembly (ASM), Software Architecture.
+\end{itemize}
+
+\noindent \textbf{Lycée} --- \textit{Baccalauréat Général (Mathematics \& Physics-Chemistry)} \hfill \textbf{2024} \\
+\textit{Highest Honors (\textmd{Mention Très Bien})} \\
+
+% --- LANGUAGES ---
+\resumesection{Languages}
+
+\noindent \textbf{French:} Native $|$ \textbf{English:} Fluent / C1 (TOEIC: 915/990, English-taught curriculum) $|$ \textbf{German:} Intermediate (B1)
 
 \end{document}
